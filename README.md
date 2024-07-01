@@ -28,7 +28,7 @@ Building a model to capture human emotional swings based on their mood.
 
 Below is a sample image from the dataset that has been analyzed by the model:
 
-![Sample Analyzed Image](sample_analyzed_image.png)
+![Sample Analyzed Image](analyzed_image.png)
 
 ## Usage
 
