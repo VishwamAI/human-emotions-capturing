@@ -25,11 +25,12 @@ def load_data(dataset_path):
         if os.path.isdir(emotion_path):
             for img_file in os.listdir(emotion_path):
                 img_path = os.path.join(emotion_path, img_file)
-                img = tf.keras.preprocessing.image.load_img(img_path, color_mode='grayscale', target_size=(IMG_SIZE, IMG_SIZE))
-                img = tf.keras.preprocessing.image.img_to_array(img)
-                img = img / 255.0  # Normalize the image
-                data.append(img)
-                labels.append(emotion)
+                if os.path.isfile(img_path):  # Ensure it's a file
+                    img = tf.keras.preprocessing.image.load_img(img_path, color_mode='grayscale', target_size=(IMG_SIZE, IMG_SIZE))
+                    img = tf.keras.preprocessing.image.img_to_array(img)
+                    img = img / 255.0  # Normalize the image
+                    data.append(img)
+                    labels.append(emotion)
     data = np.array(data)
     labels = pd.get_dummies(labels).values
     return data, labels
