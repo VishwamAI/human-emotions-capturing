@@ -11,10 +11,12 @@ Building a model to capture human emotional swings based on their mood.
 2. **Model Building**:
    - Build a Convolutional Neural Network (CNN) using TensorFlow.
    - Define the architecture with convolutional, pooling, and dense layers.
+   - Implement adaptive learning rates and early stopping mechanisms.
 
 3. **Model Training**:
    - Train the model using the preprocessed dataset.
    - Monitor training and validation accuracy and loss.
+   - Save the training history for visualization.
 
 4. **Performance Evaluation**:
    - Evaluate the model's performance on the validation set.
@@ -28,7 +30,7 @@ Building a model to capture human emotional swings based on their mood.
 
 Below is a sample image from the dataset that has been analyzed by the model:
 
-![Sample Analyzed Image](sample_analyzed_image.png)
+![Sample Analyzed Image](analyzed_image.png)
 
 ## Usage
 
