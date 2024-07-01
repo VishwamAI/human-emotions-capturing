@@ -13,7 +13,7 @@ IMG_SIZE = 48
 BATCH_SIZE = 64
 EPOCHS = 50
 NUM_CLASSES = 7
-DATASET_PATH = 'path_to_dataset'  # Update this path to the location of the dataset
+DATASET_PATH = '/home/ubuntu/human-emotions-capturing/dataset'  # Update this path to the location of the dataset
 
 # Function to load and preprocess the dataset
 def load_data(dataset_path):
@@ -74,3 +74,6 @@ history = model.fit(datagen.flow(X_train, y_train, batch_size=BATCH_SIZE), epoch
 
 # Save the model
 model.save('emotion_recognition_model.h5')
+
+# Save the training history
+np.save('/home/ubuntu/human-emotions-capturing/training_history.npy', history.history)
